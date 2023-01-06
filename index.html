@@ -5,4 +5,40 @@
         <link rel="stylesheet" href="styles.css">
     </head>
 <!-- Your HTML Here -->
+    <div class="container" id = "1">
+        <div class="cover" onmouseover="mouseEvent()" >
+            <img src="logo.jpeg" id="logo">
+        </div>
+        
+    </div>
 </html>
+
+<script>
+var card_html = `
+        <div class="card" id="3" onmouseleave="restore()">
+            <div class="left">
+                <img src="passport_size.jpeg">
+                <p>Name: <span style="float: right;">Ansh Bhatti</span></p>
+                <p>Institution: <span style="float: right;">Georgia Tech</span></p>
+                <p>Major: <span style="float: right;">Computer Science</span></p>
+                <p>Year Began: <span style="float: right;">2022</span></p>
+                <p>Expected Graduation: <span style="float: right;">2025</span></p>
+            </div>
+            <div class="right">
+                <h1>Hello,</h1>
+                <p align="justify">I am an avid programmer who wishes to apply his skills in artificial intelligence and app development to develop intelligent platforms that aid various social causes, such as supporting more inclusive and more effective virtual learning environments capable of providing K-12 education and industry skills training. At Georgia Tech, I am specializing in Intelligence and Systems-Architecture threads to gain more knowledge and experience with computing platforms.</p>
+            </div>
+        </div>
+`
+var cover_html = `
+        <div class="cover" onmouseover="mouseEvent()" >
+            <img src="logo.jpeg" id="logo">
+        </div>
+`
+function restore() {
+    document.getElementById("1").innerHTML = cover_html;
+}
+function mouseEvent() {
+    document.getElementById("1").innerHTML = card_html;
+} 
+</script>
